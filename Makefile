@@ -64,6 +64,8 @@ install:
 	cp ./LICENSE ${TEXMF}/doc/platex/morisawa/
 	cp ./README.md ${TEXMF}/doc/platex/morisawa/
 	cp ./*.pdf ${TEXMF}/doc/platex/morisawa/
+	mkdir -p ${TEXMF}/fonts/map/dvipdfmx/morisawa/
+	cp ./map/* ${TEXMF}/fonts/map/dvipdfmx/morisawa/
 	mkdir -p ${TEXMF}/fonts/tfm/public/morisawa
 	cp ./tfm/futo* ${TEXMF}/fonts/tfm/public/morisawa/
 	cp ./tfm/gtb* ${TEXMF}/fonts/tfm/public/morisawa/
