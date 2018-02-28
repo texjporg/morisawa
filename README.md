@@ -9,6 +9,10 @@ and the TFM/VF files were previously distributed as part of
 Now all these files are distributed as a separate package,
 maintained by Japanese TeX Development Community.
 
+"Morisawa" is the name of Japanese font vendor,
+but here we use only generic font names;
+it means that there is no need for actual Morisawa fonts.
+
 ## Installation
 
 - map/*  -> `$TEXMF/fonts/map/dvipdfmx/morisawa/`
