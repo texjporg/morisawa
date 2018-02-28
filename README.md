@@ -25,11 +25,6 @@ it means that there is no need for actual Morisawa fonts.
 The bundle is maintained on GitHub:
 https://github.com/texjporg/morisawa
 
-## License
-
-The bundle may be distributed and/or modified under the terms of
-the 3-clause BSD license (see [LICENSE](./LICENSE)).
-
 ## Release Date
 
 $RELEASEDATE
