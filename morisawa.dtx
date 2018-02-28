@@ -16,7 +16,7 @@
 %  奥村晴彦 <okumura@okumuralab.org>
 %
 %<morisawa>\NeedsTeXFormat{pLaTeX2e}
-%<morisawa>\ProvidesPackage{morisawa}[2003/02/09 okumura]
+%<morisawa>\ProvidesPackage{morisawa}[2018/02/28 okumura, texjporg]
 %<*driver>
 \documentclass{jsarticle}
 \usepackage{doc}
@@ -283,9 +283,11 @@
 % これをしておかないと，標準ドキュメントクラスと組み合わせると
 % 段落の字下げが揃わなくなります。
 %
+% [2018-02-28] 基準とする文字を「全角空白」（EUCコード\texttt{0xA1A1}）から
+% 「漢」（JISコード\texttt{0x3441}）へ変更しました。
 %    \begin{macrocode}
 \normalfont\normalsize
-\setbox0\hbox{\char\euc"A1A1}%
+\setbox0\hbox{\char\jis"3441}%
 \setlength\Cht{\ht0}
 \setlength\Cdp{\dp0}
 \setlength\Cwd{\wd0}
