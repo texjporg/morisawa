@@ -16,7 +16,7 @@
 %  奥村晴彦 <okumura@okumuralab.org>
 %
 %<morisawa>\NeedsTeXFormat{pLaTeX2e}
-%<morisawa>\ProvidesPackage{morisawa}[2018/02/28 okumura, texjporg]
+%<morisawa>\ProvidesPackage{morisawa}[2018/03/06 okumura, texjporg]
 %<*driver>
 \documentclass{jsarticle}
 \usepackage{doc}
@@ -258,6 +258,7 @@
 % 中ゴシック体のほうがいいというご意見で，元に戻しました。
 % いや，それは単にmapファイルの問題だ，というのでまた丸ゴシック体に戻りました。|^^;|
 %
+% [2018-03-06] |\textmg| をrobustにしました。
 %    \begin{macrocode}
 \newcommand{\mgdefault}{jun}
 \DeclareRobustCommand\mgfamily{%
@@ -272,7 +273,9 @@
 % \kanjifamily\gtdefault
   \selectfont}
 % \DeclareTextFontCommand{\textmg}{\mgfamily}
-\def\textmg#1{\relax\ifmmode\hbox\fi{\mgfamily #1}}
+% \def\textmg#1{\relax\ifmmode\hbox\fi{\mgfamily #1}}
+\DeclareRobustCommand\textmg[1]{%
+    \relax\ifmmode \expandafter\nfss@text \fi{\mgfamily #1}}
 %    \end{macrocode}
 %
 % \end{macro}

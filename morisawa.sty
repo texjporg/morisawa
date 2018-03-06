@@ -21,7 +21,7 @@
 %% same distribution. (The sources need not necessarily be
 %% in the same archive or directory.)
 \NeedsTeXFormat{pLaTeX2e}
-\ProvidesPackage{morisawa}[2018/02/28 okumura, texjporg]
+\ProvidesPackage{morisawa}[2018/03/06 okumura, texjporg]
 \newif\if@fake \@fakefalse
 \DeclareOption{fake}{\@faketrue}
 \ProcessOptions\relax
@@ -94,7 +94,8 @@
   \romanfamily\ttdefault
   \kanjifamily\mgdefault
   \selectfont}
-\def\textmg#1{\relax\ifmmode\hbox\fi{\mgfamily #1}}
+\DeclareRobustCommand\textmg[1]{%
+    \relax\ifmmode \expandafter\nfss@text \fi{\mgfamily #1}}
 \normalfont\normalsize
 \setbox0\hbox{\char\jis"3441}%
 \setlength\Cht{\ht0}
