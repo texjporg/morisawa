@@ -46,7 +46,7 @@ fonts:
 # for generating files, we use pdflatex incidentally.
 # current packages contain ASCII characters only, safe enough
 morisawa.sty: morisawa.dtx
-	rm -f morisawa
+	rm -f morisawa.sty
 	pdflatex morisawa.ins
 	rm morisawa.log
 
